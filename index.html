@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bima Kurnia Sandi — Software Developer & Technology Enthusiast</title>
-  <meta name="description" content="Personal portfolio Bima Kurnia Sandi, mahasiswa Teknik Informatika yang tertarik pada software development, data analysis, artificial intelligence, dan computer vision.">
+  <title>Bima Kurnia Sandi — Software Developer & Technology Explorer</title>
+  <meta name="description" content="Portfolio Bima Kurnia Sandi — Mahasiswa Teknik Informatika yang berfokus pada software engineering, data analysis, computer vision, dan computer hardware.">
   <meta name="keywords" content="Bima Kurnia Sandi, BimaKS, Portfolio, Software Developer, Web Developer, AI, Computer Vision, Metro, Indonesia, Universitas Dharma Wacana">
   <meta name="author" content="Bima Kurnia Sandi">
 
-  <!-- Open Graph / Facebook / LinkedIn -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Bima Kurnia Sandi — Personal Portfolio">
-  <meta property="og:description" content="Mahasiswa Teknik Informatika yang tertarik pada software development, data analysis, AI, dan computer vision.">
+  <meta property="og:title" content="Bima Kurnia Sandi — Portfolio">
+  <meta property="og:description" content="Mahasiswa Teknik Informatika & Software Developer dari Metro, Indonesia.">
   <meta property="og:image" content="assets/123.png">
   <meta property="og:url" content="https://github.com/Biimaaa">
 
   <!-- Twitter Metadata -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Bima Kurnia Sandi — Personal Portfolio">
+  <meta name="twitter:title" content="Bima Kurnia Sandi — Portfolio">
   <meta name="twitter:description" content="Mahasiswa Teknik Informatika & Software Developer dari Metro, Indonesia.">
   <meta name="twitter:image" content="assets/123.png">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Space Grotesk + Plus Jakarta Sans + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -34,9 +34,12 @@
 </head>
 <body>
 
-  <!-- Custom Cursor -->
+  <!-- Custom Cursor (Desktop) -->
   <div class="custom-cursor-dot" id="cursorDot"></div>
   <div class="custom-cursor-ring" id="cursorRing"></div>
+
+  <!-- Ambient Background Mouse Spotlight Glow -->
+  <div class="ambient-spotlight" id="ambientSpotlight"></div>
 
   <!-- Scroll Progress Indicator -->
   <div class="scroll-progress-bar" id="scrollProgress"></div>
@@ -44,28 +47,29 @@
   <!-- Header Navigation -->
   <header class="navbar-header" id="navbar">
     <div class="nav-container">
-        <a href="#hero" class="nav-brand" aria-label="Beemaa Home">
+      <a href="#hero" class="nav-brand" aria-label="Beemaa Home">
         <span class="brand-code">&lt;/&gt;</span>
         <span class="brand-name">Beemaa</span>
+        <span class="brand-badge">2026</span>
       </a>
 
       <nav class="nav-menu" id="navMenu">
         <ul class="nav-list">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
-          <li><a href="#hardware" class="nav-link">Beyond Software</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#hero" class="nav-link active"><span class="nav-idx">00</span>Home</a></li>
+          <li><a href="#about" class="nav-link"><span class="nav-idx">01</span>About</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-idx">02</span>Skills</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-idx">03</span>Projects</a></li>
+          <li><a href="#experience" class="nav-link"><span class="nav-idx">04</span>Experience</a></li>
+          <li><a href="#hardware" class="nav-link"><span class="nav-idx">05</span>Beyond Code</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-idx">06</span>Contact</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
-        <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon icon-dark"></i>
-          <i class="fa-solid fa-sun icon-light"></i>
-        </button>
+        <div class="nav-availability" title="Status ketersediaan saat ini">
+          <span class="status-pulse-dot"></span>
+          <span class="availability-text">Open for Projects</span>
+        </div>
 
         <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
           <span class="bar"></span>
@@ -88,103 +92,142 @@
       <div class="container hero-container">
         <!-- Hero Text Left -->
         <div class="hero-content">
-          <div class="hero-tag animate-fade-in">
-            <span class="dot-indicator"></span>
-            HELLO, I'M BIMA
+          <div class="hero-tag-row animate-fade-in">
+            <span class="hero-tag">
+              <span class="dot-indicator"></span>
+              SOFTWARE &amp; DATA EXPLORER
+            </span>
+            <span class="hero-location-pill">
+              <i class="fa-solid fa-location-dot"></i> Metro, Lampung, ID
+            </span>
           </div>
 
           <h1 class="hero-title animate-slide-up">
-            I Build Things <br>
-            <span class="gradient-text">With Code.</span>
+            Membangun <br>
+            sistem terstruktur <br>
+            <span class="gradient-text">&amp; membedah data.</span>
           </h1>
 
           <div class="hero-typing-wrapper animate-slide-up">
-            <span class="typing-prefix">&gt; </span>
+            <span class="typing-prefix">$ current.focus</span>
             <span id="typingText" class="typing-text"></span>
-            <span class="typing-cursor">|</span>
+            <span class="typing-cursor">_</span>
           </div>
 
           <p class="hero-description animate-slide-up">
-            Mahasiswa Teknik Informatika yang tertarik pada software development,
-            data analysis, artificial intelligence, dan computer vision.
-            Saya senang membangun sesuatu, bereksperimen dengan teknologi,
-            dan terus belajar melalui proyek nyata.
+            Mahasiswa S1 Teknik Informatika di Universitas Dharma Wacana. Berfokus pada perancangan web handal, pipeline analisis data, machine learning, computer vision, serta pemahaman mendalam tentang komponen hardware komputer.
           </p>
 
           <div class="hero-buttons animate-slide-up">
             <a href="#projects" class="btn btn-primary">
-              <span>View My Projects</span>
-              <i class="fa-solid fa-arrow-right"></i>
+              <span>Lihat Proyek</span>
+              <i class="fa-solid fa-arrow-down-long"></i>
             </a>
             <a href="#contact" class="btn btn-outline">
-              <span>Let's Connect</span>
+              <span>Hubungi Saya</span>
               <i class="fa-regular fa-paper-plane"></i>
             </a>
           </div>
 
-          <div class="hero-socials animate-slide-up">
-            <span class="socials-label">Connect:</span>
-            <a href="https://github.com/Biimaaa" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/bima-kurnia-sandi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="https://instagram.com/beema20_" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="mailto:bimakurniasandi23@gmail.com" aria-label="Email Bima">
-              <i class="fa-regular fa-envelope"></i>
-            </a>
+          <!-- Quick Stats Row in Hero -->
+          <div class="hero-stats-strip animate-slide-up">
+            <div class="stat-cell">
+              <span class="stat-number" data-target="4">4+</span>
+              <span class="stat-label">Tahun Belajar</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-cell">
+              <span class="stat-number" data-target="15">15+</span>
+              <span class="stat-label">Teknologi</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-cell">
+              <span class="stat-number" data-target="5">5</span>
+              <span class="stat-label">Milestones</span>
+            </div>
           </div>
         </div>
 
-        <!-- Hero Visual Right -->
+        <!-- Hero Visual Right (Interactive Terminal & Bento Profile) -->
         <div class="hero-visual animate-fade-in">
           <div class="visual-card-wrapper">
             <div class="visual-glow"></div>
-            
-            <!-- Terminal Window -->
-            <div class="terminal-window">
+
+            <!-- Interactive Terminal Window -->
+            <div class="terminal-window spotlight-card">
               <div class="terminal-header">
                 <div class="terminal-buttons">
                   <span class="btn-dot dot-close"></span>
                   <span class="btn-dot dot-minimize"></span>
                   <span class="btn-dot dot-maximize"></span>
                 </div>
-                <div class="terminal-title">bima@bimaks-desktop ~</div>
+                <div class="terminal-title">bima@developer-workstation: ~</div>
+                <div class="terminal-tabs">
+                  <button class="terminal-tab-btn active" data-tab="profile">profile.json</button>
+                  <button class="terminal-tab-btn" data-tab="stack">stack.sh</button>
+                </div>
               </div>
-              <div class="terminal-body">
-                <div class="terminal-line">
-                  <span class="prompt">$</span> <span class="cmd">whoami</span>
+              
+              <div class="terminal-body" id="terminalBody">
+                <div class="terminal-tab-content active" id="tabContentProfile">
+                  <div class="terminal-line">
+                    <span class="prompt">❯</span> <span class="cmd">cat profile.json</span>
+                  </div>
+                  <div class="terminal-code-block">
+                    <span class="json-bracket">{</span><br>
+                    &nbsp;&nbsp;<span class="json-key">"name"</span>: <span class="json-val">"Bima Kurnia Sandi"</span>,<br>
+                    &nbsp;&nbsp;<span class="json-key">"status"</span>: <span class="json-val">"Mahasiswa S1 Teknik Informatika"</span>,<br>
+                    &nbsp;&nbsp;<span class="json-key">"campus"</span>: <span class="json-val">"Universitas Dharma Wacana"</span>,<br>
+                    &nbsp;&nbsp;<span class="json-key">"domains"</span>: [<span class="json-val">"Web Dev"</span>, <span class="json-val">"Data Analysis"</span>, <span class="json-val">"CV"</span>, <span class="json-val">"Hardware"</span>]<br>
+                    <span class="json-bracket">}</span>
+                  </div>
+                  <div class="terminal-line margin-top">
+                    <span class="prompt">❯</span> <span class="cmd">system-status</span>
+                  </div>
+                  <div class="terminal-output status-tags">
+                    <span class="status-tag modified"><i class="fa-solid fa-circle-notch fa-spin"></i> aktif bereksperimen</span>
+                    <span class="status-tag staged"><i class="fa-solid fa-code-branch"></i> siap berkolaborasi</span>
+                  </div>
                 </div>
-                <div class="terminal-output text-highlight">bima-kurnia-sandi</div>
-                <div class="terminal-output">&gt; Software Development</div>
-                <div class="terminal-output">&gt; Data Analysis</div>
-                <div class="terminal-output">&gt; AI / Computer Vision</div>
-                
-                <div class="terminal-line margin-top">
-                  <span class="prompt">$</span> <span class="cmd">status</span>
+
+                <div class="terminal-tab-content" id="tabContentStack">
+                  <div class="terminal-line">
+                    <span class="prompt">❯</span> <span class="cmd">echo $TECH_STACK</span>
+                  </div>
+                  <div class="terminal-code-block mono-stack">
+                    • PHP Native &amp; Laravel Web Framework<br>
+                    • JavaScript ES6+ &amp; DOM Manipulation<br>
+                    • Python (Pandas, Scikit-learn, OpenCV)<br>
+                    • MySQL Database Schema &amp; Queries<br>
+                    • Hardware Assembly &amp; Diagnostics
+                  </div>
                 </div>
-                <div class="terminal-output status-tags">
-                  <span class="status-tag">learning...</span>
-                  <span class="status-tag">building...</span>
-                  <span class="status-tag">exploring...</span>
-                </div>
+              </div>
+
+              <!-- Quick Command Bar -->
+              <div class="terminal-quick-bar">
+                <span class="quick-label">Coba Jalankan:</span>
+                <button class="quick-cmd-btn" data-cmd="whoami">whoami</button>
+                <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+                <button class="quick-cmd-btn" data-cmd="clear">clear</button>
               </div>
             </div>
 
-            <!-- Profile Frame -->
-            <div class="profile-card">
+            <!-- Profile Bento Card -->
+            <div class="profile-card spotlight-card">
               <div class="profile-img-container">
                 <img src="assets/123.png" alt="Foto Profil Bima Kurnia Sandi" class="profile-img" decoding="async" fetchpriority="high">
-                <div class="profile-overlay"></div>
               </div>
               <div class="profile-info">
-                <div class="profile-name">Bima Kurnia Sandi</div>
-                <div class="profile-role">Mahasiswa Teknik Informatika</div>
-                <div class="profile-location">
-                  <i class="fa-solid fa-location-dot"></i> Metro, Indonesia
+                <div class="profile-name-row">
+                  <span class="profile-name">Bima Kurnia Sandi</span>
+                  <span class="verified-tick" title="Verified Portfolio"><i class="fa-solid fa-circle-check"></i></span>
+                </div>
+                <div class="profile-role">Mahasiswa S1 Teknik Informatika</div>
+                <div class="profile-meta">
+                  <span><i class="fa-solid fa-graduation-cap"></i> Univ Dharma Wacana</span>
+                  <span class="meta-dot">•</span>
+                  <span><i class="fa-solid fa-location-dot"></i> Metro, ID</span>
                 </div>
               </div>
             </div>
@@ -192,208 +235,184 @@
             <!-- Floating Tech Badges -->
             <div class="floating-badge badge-1 float-anim-1">
               <i class="fa-solid fa-code"></i>
-              <span>Software Dev</span>
+              <span>Software Engineering</span>
             </div>
             <div class="floating-badge badge-2 float-anim-2">
               <i class="fa-solid fa-brain"></i>
-              <span>Data & AI</span>
+              <span>Data &amp; Machine Learning</span>
             </div>
             <div class="floating-badge badge-3 float-anim-3">
               <i class="fa-solid fa-microchip"></i>
-              <span>PC Hardware</span>
+              <span>Hardware &amp; Systems</span>
             </div>
-
           </div>
         </div>
       </div>
 
-      <!-- Scroll Indicator -->
-      <a href="#about" class="scroll-indicator" aria-label="Scroll to explore section">
-        <span class="scroll-text">SCROLL TO EXPLORE</span>
-        <div class="scroll-arrow">
-          <i class="fa-solid fa-chevron-down"></i>
+      <!-- Marquee Ticker: Continuous Tech Ribbon -->
+      <div class="hero-ticker-wrap">
+        <div class="hero-ticker">
+          <div class="ticker-content">
+            <span>PHP &amp; LARAVEL</span>
+            <span class="ticker-star">✦</span>
+            <span>JAVASCRIPT ES6+</span>
+            <span class="ticker-star">✦</span>
+            <span>PYTHON &amp; OPENCV</span>
+            <span class="ticker-star">✦</span>
+            <span>MYSQL ARCHITECTURE</span>
+            <span class="ticker-star">✦</span>
+            <span>MACHINE LEARNING REGRESSION</span>
+            <span class="ticker-star">✦</span>
+            <span>COMPUTER VISION ANALYSIS</span>
+            <span class="ticker-star">✦</span>
+            <span>CUSTOM PC ASSEMBLY</span>
+            <span class="ticker-star">✦</span>
+            <span>SYSTEM DIAGNOSTICS</span>
+            <span class="ticker-star">✦</span>
+          </div>
+          <div class="ticker-content" aria-hidden="true">
+            <span>PHP &amp; LARAVEL</span>
+            <span class="ticker-star">✦</span>
+            <span>JAVASCRIPT ES6+</span>
+            <span class="ticker-star">✦</span>
+            <span>PYTHON &amp; OPENCV</span>
+            <span class="ticker-star">✦</span>
+            <span>MYSQL ARCHITECTURE</span>
+            <span class="ticker-star">✦</span>
+            <span>MACHINE LEARNING REGRESSION</span>
+            <span class="ticker-star">✦</span>
+            <span>COMPUTER VISION ANALYSIS</span>
+            <span class="ticker-star">✦</span>
+            <span>CUSTOM PC ASSEMBLY</span>
+            <span class="ticker-star">✦</span>
+            <span>SYSTEM DIAGNOSTICS</span>
+            <span class="ticker-star">✦</span>
+          </div>
         </div>
-      </a>
+      </div>
     </section>
 
-    <!-- ABOUT SECTION -->
+    <!-- ABOUT SECTION (BENTO GRID STYLE) -->
     <section id="about" class="section about-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">01 / ABOUT</span>
-          <h2 class="section-title">A little about me.</h2>
+          <span class="section-number">01 / BACKGROUND</span>
+          <h2 class="section-title">Dedikasi kode, data &amp; arsitektur sistem.</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-text-content reveal-on-scroll">
             <p class="about-lead">
-              Saya adalah mahasiswa aktif S1 Teknik Informatika di <strong>Universitas Dharma Wacana</strong>.
-              Saya memiliki ketertarikan pada pengembangan, website, aplikasi,
-              data analysis, machine learning, computer vision, dan berbagai eksperimen teknologi.
+              Saya adalah mahasiswa aktif S1 Teknik Informatika di <strong>Universitas Dharma Wacana</strong>, berdomisili di Metro, Lampung. Memiliki minat mendalam pada konstruksi perangkat lunak, pemodelan data, serta mekanisme teknis perangkat keras komputer.
             </p>
             <p>
-              Saya menikmati proses membangun sesuatu dari awal, memecahkan masalah melalui kode,
-              dan mempelajari teknologi baru melalui proyek nyata.
+              Bagi saya, pemrograman adalah proses merancang solusi yang bersih, efisien, dan berkelanjutan. Saya menikmati setiap siklus pengerjaan—mulai dari memetakan basis data relasional MySQL, menyusun logika backend PHP/Laravel, hingga menghasilkan tampilan web yang intuitif dan cepat diakses.
             </p>
             <p>
-              Selain software, saya juga tertarik dengan hardware komputer, mulai dari merakit PC,
-              memilih komponen, melakukan troubleshooting, hingga memahami bagaimana sistem komputer bekerja.
+              Selain software, saya juga mendalami hardware PC: memilih sinergi antar komponen, merakit sistem berkinerja stabil, mengelola kabel secara rapi, serta melakukan pengujian dan penanganan malfungsi komponen.
             </p>
 
             <div class="about-actions">
-              <a href="assets/cv.pdf" download="Bima_Kurnia_Sandi_CV.pdf" class="btn btn-outline" id="downloadCvBtn">
+              <a href="assets/cv.pdf" download="Bima_Kurnia_Sandi_CV.pdf" class="btn btn-primary" id="downloadCvBtn">
                 <i class="fa-solid fa-file-arrow-down"></i>
                 <span>Download CV</span>
               </a>
-              <button class="btn btn-secondary" id="copyEmailBtn">
+              <button class="btn btn-outline" id="copyEmailBtn">
                 <i class="fa-regular fa-copy"></i>
-                <span id="copyEmailText">Copy Email</span>
+                <span id="copyEmailText">Salin Email</span>
               </button>
             </div>
           </div>
 
           <div class="about-cards-grid reveal-on-scroll">
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-              <div class="info-label">Education</div>
+            <div class="info-card spotlight-card">
+              <div class="info-card-top">
+                <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span class="info-index">01 / PENDIDIKAN</span>
+              </div>
+              <div class="info-label">Pendidikan Terkini</div>
               <div class="info-value">S1 Teknik Informatika</div>
-              <div class="info-sub">Universitas Dharma Wacana</div>
+              <div class="info-sub">Universitas Dharma Wacana (2023 — Sekarang)</div>
             </div>
 
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
-              <div class="info-label">Location</div>
-              <div class="info-value">Metro, Indonesia</div>
-              <div class="info-sub">Lampung Province</div>
+            <div class="info-card spotlight-card">
+              <div class="info-card-top">
+                <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <span class="info-index">02 / DOMISILI</span>
+              </div>
+              <div class="info-label">Lokasi Utama</div>
+              <div class="info-value">Metro, Lampung</div>
+              <div class="info-sub">Indonesia, Waktu Indonesia Barat (GMT+7)</div>
             </div>
 
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-solid fa-laptop-code"></i></div>
-              <div class="info-label">Focus</div>
-              <div class="info-value">Software Development</div>
-              <div class="info-sub">Web & Application</div>
+            <div class="info-card spotlight-card">
+              <div class="info-card-top">
+                <div class="info-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <span class="info-index">03 / FOKUS</span>
+              </div>
+              <div class="info-label">Fokus Utama</div>
+              <div class="info-value">Fullstack &amp; Database</div>
+              <div class="info-sub">Aplikasi Web Berbasis PHP, MySQL, &amp; JS</div>
             </div>
 
-            <div class="info-card">
-              <div class="info-icon"><i class="fa-solid fa-robot"></i></div>
-              <div class="info-label">Exploring</div>
-              <div class="info-value">AI & Computer Vision</div>
-              <div class="info-sub">Data & Machine Learning</div>
+            <div class="info-card spotlight-card">
+              <div class="info-card-top">
+                <div class="info-icon"><i class="fa-solid fa-microchip"></i></div>
+                <span class="info-index">04 / EKSPLORASI</span>
+              </div>
+              <div class="info-label">Riset &amp; Minat</div>
+              <div class="info-value">AI &amp; Computer Vision</div>
+              <div class="info-sub">Pengolahan Citra Digital &amp; Rakit PC</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS SECTION -->
+    <!-- SKILLS SECTION (CATEGORIZED LOGO GRID) -->
     <section id="skills" class="section skills-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-number">02 / SKILLS</span>
-          <h2 class="section-title">What I work with.</h2>
+        <div class="section-header-row">
+          <div class="section-header">
+            <span class="section-number">02 / KEMAMPUAN</span>
+            <h2 class="section-title">Teknologi &amp; domain keahlian.</h2>
+          </div>
+          <div class="skills-hint-badge">
+            <i class="fa-solid fa-hand-pointer"></i>
+            <span>Klik logo teknologi untuk melihat rincian</span>
+          </div>
         </div>
 
         <!-- Filter Buttons -->
         <div class="skills-filter-container reveal-on-scroll">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="software">Software</button>
-          <button class="filter-btn" data-filter="data">Data</button>
-          <button class="filter-btn" data-filter="ai">AI</button>
+          <button class="filter-btn active" data-filter="all">Semua Kategori</button>
+          <button class="filter-btn" data-filter="software">Software Dev</button>
+          <button class="filter-btn" data-filter="data">Data Analysis</button>
+          <button class="filter-btn" data-filter="ai">AI / Vision</button>
           <button class="filter-btn" data-filter="hardware">Hardware</button>
-          <button class="filter-btn" data-filter="other">Other</button>
+          <button class="filter-btn" data-filter="other">Pendukung</button>
         </div>
 
-        <!-- Skills Container -->
+        <!-- Categorized Skills Grid -->
         <div class="skills-categories-grid" id="skillsGrid">
-          <!-- Software Development -->
-          <div class="skill-category-card reveal-on-scroll" data-category="software">
-            <div class="category-header">
-              <i class="fa-solid fa-code category-icon"></i>
-              <h3>Software Development</h3>
-            </div>
-            <div class="chips-grid">
-              <div class="skill-chip"><i class="fa-brands fa-html5"></i> HTML</div>
-              <div class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS</div>
-              <div class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
-              <div class="skill-chip"><i class="fa-brands fa-php"></i> PHP Native</div>
-              <div class="skill-chip"><i class="fa-solid fa-database"></i> MySQL</div>
-              <div class="skill-chip"><i class="fa-brands fa-laravel"></i> Laravel</div>
-              <div class="skill-chip"><i class="fa-solid fa-globe"></i> Web Application</div>
-              <div class="skill-chip"><i class="fa-brands fa-android"></i> Android Application</div>
-            </div>
-          </div>
-
-          <!-- Data Analysis -->
-          <div class="skill-category-card reveal-on-scroll" data-category="data">
-            <div class="category-header">
-              <i class="fa-solid fa-chart-pie category-icon"></i>
-              <h3>Data Analysis</h3>
-            </div>
-            <div class="chips-grid">
-              <div class="skill-chip"><i class="fa-solid fa-broom"></i> Data Cleaning</div>
-              <div class="skill-chip"><i class="fa-solid fa-gears"></i> Data Preprocessing</div>
-              <div class="skill-chip"><i class="fa-solid fa-magnifying-glass-chart"></i> Exploratory Data Analysis</div>
-              <div class="skill-chip"><i class="fa-solid fa-chart-line"></i> Data Visualization</div>
-              <div class="skill-chip"><i class="fa-solid fa-square-poll-vertical"></i> Model Evaluation</div>
-            </div>
-          </div>
-
-          <!-- AI & Machine Learning -->
-          <div class="skill-category-card reveal-on-scroll" data-category="ai">
-            <div class="category-header">
-              <i class="fa-solid fa-brain category-icon"></i>
-              <h3>AI & Machine Learning</h3>
-            </div>
-            <div class="chips-grid">
-              <div class="skill-chip"><i class="fa-solid fa-robot"></i> Machine Learning</div>
-              <div class="skill-chip"><i class="fa-solid fa-network-wired"></i> Deep Learning</div>
-              <div class="skill-chip"><i class="fa-solid fa-eye"></i> Computer Vision</div>
-              <div class="skill-chip"><i class="fa-solid fa-image"></i> Image Processing</div>
-              <div class="skill-chip"><i class="fa-solid fa-vial-circle-check"></i> Model Testing</div>
-              <div class="skill-chip"><i class="fa-solid fa-flask"></i> AI Experimentation</div>
-            </div>
-          </div>
-
-          <!-- Computer & Hardware -->
-          <div class="skill-category-card reveal-on-scroll" data-category="hardware">
-            <div class="category-header">
-              <i class="fa-solid fa-microchip category-icon"></i>
-              <h3>Computer & Hardware</h3>
-            </div>
-            <div class="chips-grid">
-              <div class="skill-chip"><i class="fa-solid fa-screwdriver-wrench"></i> PC Building</div>
-              <div class="skill-chip"><i class="fa-solid fa-triangle-exclamation"></i> Hardware Troubleshooting</div>
-              <div class="skill-chip"><i class="fa-solid fa-memory"></i> Component Selection</div>
-              <div class="skill-chip"><i class="fa-brands fa-windows"></i> OS Installation</div>
-              <div class="skill-chip"><i class="fa-solid fa-wrench"></i> System Maintenance</div>
-            </div>
-          </div>
-
-          <!-- Supporting Skills -->
-          <div class="skill-category-card reveal-on-scroll" data-category="other">
-            <div class="category-header">
-              <i class="fa-solid fa-user-gear category-icon"></i>
-              <h3>Supporting Skills</h3>
-            </div>
-            <div class="chips-grid">
-              <div class="skill-chip"><i class="fa-solid fa-file-word"></i> Microsoft Office</div>
-              <div class="skill-chip"><i class="fa-solid fa-folder-tree"></i> Administration</div>
-              <div class="skill-chip"><i class="fa-solid fa-file-lines"></i> Document Management</div>
-              <div class="skill-chip"><i class="fa-solid fa-comments"></i> Communication</div>
-              <div class="skill-chip"><i class="fa-solid fa-people-group"></i> Teamwork</div>
-              <div class="skill-chip"><i class="fa-solid fa-lightbulb"></i> Problem Solving</div>
-            </div>
-          </div>
+          <!-- Rendered dynamically via script.js -->
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
+    <!-- PROJECTS SECTION (INTERACTIVE SHOWCASE) -->
     <section id="projects" class="section projects-section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-number">03 / PROJECTS</span>
-          <h2 class="section-title">Things I've built.</h2>
+        <div class="section-header-row">
+          <div class="section-header">
+            <span class="section-number">03 / PROYEK TERPILIH</span>
+            <h2 class="section-title">Karya &amp; eksplorasi yang dibangun.</h2>
+          </div>
+          <div class="projects-legend">
+            <span class="legend-item"><span class="chip-status-dot active"></span> Aktif</span>
+            <span class="legend-item"><span class="chip-status-dot"></span> Coming Soon</span>
+            <span class="legend-hint">Klik kartu untuk melihat rincian modal</span>
+          </div>
         </div>
 
         <!-- Rendered via script.js -->
@@ -401,12 +420,12 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE SECTION -->
+    <!-- EXPERIENCE SECTION (TIMELINE) -->
     <section id="experience" class="section experience-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">04 / EXPERIENCE</span>
-          <h2 class="section-title">My journey so far.</h2>
+          <span class="section-number">04 / PERJALANAN</span>
+          <h2 class="section-title">Riwayat pendidikan &amp; pengalaman.</h2>
         </div>
 
         <div class="timeline-wrapper reveal-on-scroll">
@@ -417,14 +436,15 @@
               <div class="timeline-marker">
                 <i class="fa-solid fa-school"></i>
               </div>
-              <div class="timeline-content">
-                <span class="timeline-badge education">Education</span>
-                <span class="timeline-date">2020 - 2023</span>
+              <div class="timeline-content spotlight-card">
+                <div class="timeline-header-row">
+                  <span class="timeline-badge education">Pendidikan</span>
+                  <span class="timeline-date">2020 — 2023</span>
+                </div>
                 <h3 class="timeline-title">Manajemen Perkantoran</h3>
                 <h4 class="timeline-org">SMK Negeri 1 Metro</h4>
                 <p class="timeline-text">
-                  Mempelajari manajemen tata kelola administrasi, kearsipan digital, penyusunan laporan,
-                  korespondensi bisnis, komunikasi profesional, dan operasional perkantoran.
+                  Mempelajari manajemen tata kelola administrasi, kearsipan digital, penyusunan laporan, korespondensi bisnis, komunikasi profesional, dan operasional perkantoran.
                 </p>
               </div>
             </div>
@@ -434,14 +454,15 @@
               <div class="timeline-marker">
                 <i class="fa-solid fa-briefcase"></i>
               </div>
-              <div class="timeline-content">
-                <span class="timeline-badge internship">Experience</span>
-                <span class="timeline-date">Januari 2022 - Maret 2022</span>
+              <div class="timeline-content spotlight-card">
+                <div class="timeline-header-row">
+                  <span class="timeline-badge internship">Pengalaman</span>
+                  <span class="timeline-date">Jan 2022 — Mar 2022</span>
+                </div>
                 <h3 class="timeline-title">Magang Administratif</h3>
                 <h4 class="timeline-org">Kecamatan Metro Pusat</h4>
                 <p class="timeline-text">
-                  Membantu pengelolaan dokumen, arsip, surat-menyurat,
-                  penyusunan laporan administrasi, dan pelayanan publik.
+                  Membantu pengelolaan dokumen, arsip, surat-menyurat, penyusunan laporan administrasi, dan pelayanan publik secara profesional.
                 </p>
               </div>
             </div>
@@ -451,14 +472,15 @@
               <div class="timeline-marker">
                 <i class="fa-solid fa-graduation-cap"></i>
               </div>
-              <div class="timeline-content">
-                <span class="timeline-badge education">Education</span>
-                <span class="timeline-date">2023 - Sekarang</span>
+              <div class="timeline-content spotlight-card">
+                <div class="timeline-header-row">
+                  <span class="timeline-badge education">Pendidikan</span>
+                  <span class="timeline-date">2023 — Sekarang</span>
+                </div>
                 <h3 class="timeline-title">S1 Teknik Informatika</h3>
                 <h4 class="timeline-org">Universitas Dharma Wacana</h4>
                 <p class="timeline-text">
-                  Mahasiswa aktif yang mendalami prinsip pemrograman, algoritma, rekayasa perangkat lunak,
-                  basis data, analisis data, kecerdasan buatan, serta arsitektur komputer.
+                  Mahasiswa aktif yang mendalami prinsip pemrograman, algoritma struktur data, rekayasa perangkat lunak, basis data relasional, analisis data, dan kecerdasan buatan.
                 </p>
               </div>
             </div>
@@ -468,14 +490,15 @@
               <div class="timeline-marker">
                 <i class="fa-solid fa-laptop-code"></i>
               </div>
-              <div class="timeline-content">
-                <span class="timeline-badge freelance">Experience</span>
-                <span class="timeline-date">2024 - Sekarang</span>
-                <h3 class="timeline-title">Freelance</h3>
+              <div class="timeline-content spotlight-card">
+                <div class="timeline-header-row">
+                  <span class="timeline-badge freelance">Pengalaman</span>
+                  <span class="timeline-date">2024 — Sekarang</span>
+                </div>
+                <h3 class="timeline-title">Freelance Software Builder</h3>
                 <h4 class="timeline-org">Independent Projects</h4>
                 <p class="timeline-text">
-                  Mengembangkan berbagai website dan aplikasi sebagai bagian dari
-                  pengembangan kemampuan software development dan eksplorasi teknologi.
+                  Mengembangkan berbagai solusi website dan aplikasi kustom sebagai bagian dari pematangan kemampuan software development dan implementasi teknologi nyata.
                 </p>
               </div>
             </div>
@@ -485,14 +508,15 @@
               <div class="timeline-marker">
                 <i class="fa-solid fa-chalkboard-user"></i>
               </div>
-              <div class="timeline-content">
-                <span class="timeline-badge tutoring">Experience</span>
-                <span class="timeline-date">2026 (1 Bulan)</span>
+              <div class="timeline-content spotlight-card">
+                <div class="timeline-header-row">
+                  <span class="timeline-badge tutoring">Pengalaman</span>
+                  <span class="timeline-date">2026 (1 Bulan)</span>
+                </div>
                 <h3 class="timeline-title">Private Coding Tutor</h3>
                 <h4 class="timeline-org">Private Mentorship</h4>
                 <p class="timeline-text">
-                  Memberikan bimbingan privat coding dan membantu peserta memahami
-                  konsep dasar pemrograman serta logika coding.
+                  Memberikan bimbingan privat coding dan membantu peserta memahami konsep dasar logika pemrograman, alur struktur kode, serta latihan penyelesaian masalah.
                 </p>
               </div>
             </div>
@@ -502,53 +526,61 @@
       </div>
     </section>
 
-    <!-- BEYOND SOFTWARE SECTION -->
+    <!-- BEYOND SOFTWARE (HARDWARE & EXPLORATIONS) SECTION -->
     <section id="hardware" class="section hardware-section">
       <div class="container">
         <div class="section-header">
-          <span class="section-number">05 / BEYOND SOFTWARE</span>
-          <h2 class="section-title">I also like understanding the machine behind the code.</h2>
+          <span class="section-number">05 / BEYOND CODE</span>
+          <h2 class="section-title">Hardware, sistem &amp; eksplorasi teknologi.</h2>
         </div>
 
         <p class="hardware-lead reveal-on-scroll">
-          My interest in technology doesn't stop at software. I also enjoy exploring computer hardware, building PCs,
-          understanding components, troubleshooting problems, and experimenting with different system configurations.
+          Ketertarikan saya pada teknologi tidak berhenti di kode semata. Saya menikmati memahami arsitektur fisik mesin komputer—mulai dari perakitan sistem, optimasi termal dan jalur aliran udara, diagnosa malfungsi komponen, hingga eksperimen domain AI terbaru.
         </p>
 
         <!-- Hardware Tags -->
         <div class="hardware-tags reveal-on-scroll">
-          <span class="hw-tag"><i class="fa-solid fa-screwdriver-wrench"></i> PC Building</span>
-          <span class="hw-tag"><i class="fa-solid fa-bug"></i> Hardware Troubleshooting</span>
-          <span class="hw-tag"><i class="fa-solid fa-sliders"></i> Component Selection</span>
-          <span class="hw-tag"><i class="fa-solid fa-compact-disc"></i> Operating Systems</span>
-          <span class="hw-tag"><i class="fa-solid fa-shield-halved"></i> Computer Maintenance</span>
+          <span class="hw-tag"><i class="fa-solid fa-screwdriver-wrench"></i> Perakitan PC Kustom</span>
+          <span class="hw-tag"><i class="fa-solid fa-bug"></i> Diagnostik Komponen</span>
+          <span class="hw-tag"><i class="fa-solid fa-sliders"></i> Optimasi Aliran Udara &amp; Suhu</span>
+          <span class="hw-tag"><i class="fa-solid fa-compact-disc"></i> Konfigurasi Sistem Operasi</span>
+          <span class="hw-tag"><i class="fa-solid fa-shield-halved"></i> Manajemen Kabel &amp; Perawatan</span>
         </div>
 
-        <!-- Currently Exploring Section -->
-        <div class="currently-exploring-wrapper reveal-on-scroll">
-          <h3 class="exploring-title">
-            <span class="pulsing-status"></span> Currently Exploring
-          </h3>
+        <!-- Currently Exploring Bento Grid -->
+        <div class="currently-exploring-wrapper spotlight-card reveal-on-scroll">
+          <div class="exploring-header-row">
+            <h3 class="exploring-title">
+              <span class="pulsing-status"></span> Fokus Eksplorasi Aktif (2026)
+            </h3>
+            <span class="exploring-meta-sub">Continuous Learning &amp; Experiments</span>
+          </div>
+
           <div class="exploring-cards-grid">
             <div class="exploring-card">
+              <div class="exploring-icon"><i class="fa-solid fa-robot"></i></div>
               <div class="exploring-topic">Machine Learning</div>
-              <div class="exploring-status">Learning & Experimenting</div>
+              <div class="exploring-status">Regresi &amp; Komparasi Model</div>
             </div>
             <div class="exploring-card">
+              <div class="exploring-icon"><i class="fa-solid fa-eye"></i></div>
               <div class="exploring-topic">Computer Vision</div>
-              <div class="exploring-status">Building & Experimenting</div>
+              <div class="exploring-status">OpenCV, Filter &amp; Tekstur Citra</div>
             </div>
             <div class="exploring-card">
+              <div class="exploring-icon"><i class="fa-solid fa-chart-line"></i></div>
               <div class="exploring-topic">Data Analysis</div>
-              <div class="exploring-status">Learning & Applying</div>
+              <div class="exploring-status">EDA &amp; Pandas Pipeline</div>
             </div>
             <div class="exploring-card">
-              <div class="exploring-topic">Android Development</div>
-              <div class="exploring-status">Exploring</div>
+              <div class="exploring-icon"><i class="fa-brands fa-android"></i></div>
+              <div class="exploring-topic">Android Dev</div>
+              <div class="exploring-status">Aplikasi Mobile Berbasis Java/Kotlin</div>
             </div>
             <div class="exploring-card">
+              <div class="exploring-icon"><i class="fa-solid fa-microchip"></i></div>
               <div class="exploring-topic">Deep Learning</div>
-              <div class="exploring-status">Exploring</div>
+              <div class="exploring-status">Prinsip Dasar Arsitektur Neural</div>
             </div>
           </div>
         </div>
@@ -560,16 +592,16 @@
     <section id="contact" class="section contact-section">
       <div class="container">
         <div class="contact-wrapper">
-          
+
           <div class="contact-info reveal-on-scroll">
-            <h2 class="contact-headline">Let's Build Something.</h2>
+            <span class="section-number">06 / HUBUNGI SAYA</span>
+            <h2 class="contact-headline">Mari bangun sesuatu bersama.</h2>
             <p class="contact-sub">
-              Have an idea, project, or just want to talk about technology?
-              <br>Feel free to reach out.
+              Punya ide proyek menarik, tawaran kolaborasi, atau sekadar ingin berdiskusi mengenai software dan teknologi? Jangan ragu untuk menghubungi saya.
             </p>
 
             <div class="contact-details">
-              <a href="mailto:bimakurniasandi23@gmail.com" class="contact-detail-item">
+              <a href="mailto:bimakurniasandi23@gmail.com" class="contact-detail-item spotlight-card">
                 <div class="detail-icon"><i class="fa-regular fa-envelope"></i></div>
                 <div>
                   <span class="detail-label">Email</span>
@@ -577,11 +609,11 @@
                 </div>
               </a>
 
-              <div class="contact-detail-item">
+              <div class="contact-detail-item spotlight-card">
                 <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
                 <div>
-                  <span class="detail-label">Location</span>
-                  <span class="detail-value">Metro, Indonesia</span>
+                  <span class="detail-label">Lokasi</span>
+                  <span class="detail-value">Metro, Lampung, Indonesia</span>
                 </div>
               </div>
             </div>
@@ -599,31 +631,31 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
-          <div class="contact-form-card reveal-on-scroll">
-            <h3 class="form-title">Send a Message</h3>
-            
+          <!-- Contact Form Card -->
+          <div class="contact-form-card spotlight-card reveal-on-scroll">
+            <h3 class="form-title">Kirim Pesan</h3>
+
             <form id="contactForm" novalidate>
               <div class="form-group">
-                <label for="nameInput">Name</label>
-                <input type="text" id="nameInput" name="name" placeholder="Your Name" required>
+                <label for="nameInput">Nama Anda</label>
+                <input type="text" id="nameInput" name="name" placeholder="Nama Lengkap" required>
                 <span class="error-text" id="nameError"></span>
               </div>
 
               <div class="form-group">
-                <label for="emailInput">Email</label>
-                <input type="email" id="emailInput" name="email" placeholder="your.email@example.com" required>
+                <label for="emailInput">Alamat Email</label>
+                <input type="email" id="emailInput" name="email" placeholder="nama@email.com" required>
                 <span class="error-text" id="emailError"></span>
               </div>
 
               <div class="form-group">
-                <label for="messageInput">Message</label>
-                <textarea id="messageInput" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                <label for="messageInput">Isi Pesan</label>
+                <textarea id="messageInput" name="message" rows="5" placeholder="Tuliskan pesan atau pertanyaan Anda di sini..." required></textarea>
                 <span class="error-text" id="messageError"></span>
               </div>
 
               <button type="submit" class="btn btn-primary btn-full">
-                <span>Send Message</span>
+                <span>Kirim Pesan</span>
                 <i class="fa-regular fa-paper-plane"></i>
               </button>
 
@@ -656,13 +688,30 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-container">
-      <div class="footer-brand">
-        <a href="#hero" class="brand-name">&lt;/&gt; Beemaa</a>
-        <p class="footer-tagline">Software Developer • AI Enthusiast • Technology Explorer</p>
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <a href="#hero" class="brand-name">&lt;/&gt; Beemaa</a>
+          <p class="footer-tagline">Software Developer • AI Explorer • Hardware Enthusiast</p>
+        </div>
+        <div class="footer-nav-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
       </div>
-      
-      <div class="footer-copy">
-        <p>&copy; <span id="currentYear"></span> Bima Kurnia Sandi.</p>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom-row">
+        <div class="footer-copy">
+          <p>&copy; <span id="currentYear"></span> Bima Kurnia Sandi. Handcrafted with clean vanilla code.</p>
+        </div>
+        <div class="footer-status-pill">
+          <span class="footer-dot"></span>
+          <span>Metro, Lampung, ID — 100% Zero Frameworks</span>
+        </div>
       </div>
     </div>
   </footer>
